@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Questions
+{% endblock %}
+
+{% block body %}
+
+<table class="table my-0">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Date Published</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for question in questions %}
+      <tr> 
+        <td>{{ question.title }}</td>
+        <td>{{ question.date_published }}</td>
+        <td>
+        	<a href="{% url 'choices_list' question.pk %}">View Choices</button>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

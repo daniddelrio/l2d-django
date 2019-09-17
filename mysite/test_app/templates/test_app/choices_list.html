@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Choices for {{ question.title }}
+{% endblock %}
+
+{% block body %}
+
+<table class="table my-0">
+  <h3>{{ question.title }}</h3>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for choice in choices %}
+      <tr> 
+        <td>{{ forloop.counter }}</td>
+        <td>{{ choice.name }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
