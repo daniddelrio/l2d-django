@@ -1,6 +1,6 @@
-# l2d-django
+# sample-django
 
-Django boilerplate code for L2D
+Django boilerplate code for L2D, including sample models, views and forms as a teaching tool for beginner Django developers. I use this repository for my [slides showing how to create simple views](http://bit.ly/DjangoCreatingAView). The views also contain comments to explain what the code in the views means.
 
 Steps:
 1. Run `python manage.py makemigrations` and `python manage.py migrate` to migrate your database.
