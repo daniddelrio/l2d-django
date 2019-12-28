@@ -15,7 +15,7 @@ Choices for {{ question.title }}
     </tr>
   </thead>
   <tbody>
-    {% for choice in choices %}
+    {% for choice in question.choices.all %}
       <tr> 
         <td>{{ forloop.counter }}</td>
         <td>{{ choice.name }}</td>
